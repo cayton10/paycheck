@@ -26,5 +26,5 @@ The employee's pay is based on a 40 hour week and they are paid time and a half 
     * Social Security:
         * 6.2% of gross income
     * Medicare:
-        * 1.45% of gross income
+        * 1.45% of gross income"
 
