@@ -8,6 +8,8 @@
   <title>eNno Bootstrap Template</title>
 
   <!-- Bootstrap -->
+  <!-- FONT AWESOME SCRIPT -->
+  <script src="https://kit.fontawesome.com/bff77f2e89.js" crossorigin="anonymous"></script>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -30,30 +32,11 @@
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+      <div class="navbar-header">   
         <a class="navbar-brand" href="index.html"><span>Paycheck$</span></a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <div class="menu">
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="index.html">Home</a></li>
-            <li role="presentation"><a href="services.html">Services</a></li>
-            <li role="presentation"><a href="blog.html">Blog</a></li>
-            <li role="presentation"><a href="portfolio.html">Portfolio</a></li>
-            <li role="presentation"><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
       </div>
     </div>
   </nav>
-
-
   <div class="container">
     <div class="row">
       <div class="slider">
@@ -87,16 +70,17 @@
       <div class="box">
         <div class="col-md-4 col-md-offset-4">
           <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
-            <h4>Responsive</h4>
+            <h4>Designed with Phone in Mind</h4>
             <div class="icon">
-              <i class="fa fa-heart-o fa-3x"></i>
+              <i class="fas fa-mobile-alt fa-5x"></i>
             </div>
-            <p>Can be accessed on desktop or mobile.</p>
+            <p>Can be accessed on desktop or mobile. <br />
+               Bookmark or save to your mobile homescreen for easy access!</p>
           </div>
         </div>
       </div>
     </div>
-      <form action="printcheck.php" method="post">
+      <form action="php/printcheck.php" method="post">
           <div class="form-group row">
             <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
               <label for="employeeName">Name</label>
@@ -123,42 +107,8 @@
       </form>
   </div>
   
-  <footer>
-    <div class="last-div">
-      <div class="container">
-        <div class="row">
-          <div class="copyright">
-            &copy; eNno Theme. All Rights Reserved
-            <div class="credits">
-              <!--
-                All the links in the footer should remain intact. 
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eNno
-              -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <ul class="social-network">
-            <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook fa-1x"></i></a></li>
-            <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter fa-1x"></i></a></li>
-            <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin fa-1x"></i></a></li>
-            <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest fa-1x"></i></a></li>
-            <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus fa-1x"></i></a></li>
-          </ul>
-        </div>
-      </div>
-
-      <a href="" class="scrollup"><i class="fa fa-chevron-up"></i></a>
-
-
-    </div>
-  </footer>
-
+  <!-- php Require footer -->
+  <? require_once 'php/footer.php'; ?>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-2.1.1.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->

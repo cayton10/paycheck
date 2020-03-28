@@ -20,3 +20,16 @@ input{
     font-weight: bold;
     color: darkgreen;
 }
+
+.grossPay {
+    font-weight: bold !important;
+    color: #36CBD4 !important;
+}
+
+hr {
+    border: 0.5px solid #36CBD4 !important;
+}
+
+.pay {
+    margin-bottom: 70px;
+}
