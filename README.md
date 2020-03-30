@@ -1,7 +1,10 @@
 # Paycheck Calculator
 Base PHP project for CIT 313. This is the first time we've used server-side scripting to build anything. This is fun!
 
-## Project Specification:
+## Access
+The project has been placed on a Marshall U. web server. You can access it <a href="http://cit.marshall.edu/cit313/cayton10/PHP/HW1/paycheck/index.php" target='_blank'>here</a>. This may become inactive at any time, as I do not operate this server. Please notify me if it doesn't work so I can either remove the link or find web hosting for the example. 
+
+### Project Specification:
 
 "Provide the user with a form (must use Bootstrap form classes and form validation) to collect from the user the following: 
 
