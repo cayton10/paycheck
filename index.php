@@ -42,9 +42,9 @@
       <div class="slider">
         <div class="img-responsive">
           <ul class="bxslider">
-            <li><img src="img/01.jpg" alt="" /></li>
-            <li><img src="img/01.jpg" alt="" /></li>
-            <li><img src="img/01.jpg" alt="" /></li>
+            <li><img src="https://cdn.ramseysolutions.net/media/article-images/how-to-stop-living-paycheck-to-paycheck.jpg" alt="Paycheck Calendar" /></li>
+            <li><img src="https://cdn.gobankingrates.com/wp-content/uploads/2017/05/0_MAIN_170531_GBR_PaycheckDeduction_1920x1080.jpg" alt="Paycheck Image" /></li>
+            <li><img src="https://www.payactiv.com/wp-content/uploads/2019/02/escaping-debt.jpg" alt="Financials Image" /></li>
           </ul>
         </div>
       </div>

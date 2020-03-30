@@ -28,3 +28,5 @@ The employee's pay is based on a 40 hour week and they are paid time and a half 
     * Medicare:
         * 1.45% of gross income"
 
+        
+

@@ -59,19 +59,21 @@
   <?php
   /* ----------------------- declare required variables ----------------------- */
 
-  /* --------------------------------- FED TAX -------------------------------- */
-  $ft10 = 0.10;
-  $ft12 = 0.12;
-  $ft22 = 0.22;
-  $ft24 = 0.24;
-  /* -------------------------------- STATE TAX ------------------------------- */
-  $st3 = 0.03;
-  $st4 = 0.04;
-  $st5 = 0.05;
-  /* ----------------------------- SOCIAL SEC TAX ----------------------------- */  
-  $socSec = 0.062;
-  /* ------------------------------ MEDICARE TAX ------------------------------ */
-  $medi = 0.0145;
+  /* ---------------------------- FED TAX CONSTANTS --------------------------- */  
+  define('FEDTAX10', 0.10);
+  define('FEDTAX12', 0.12);
+  define('FEDTAX22', 0.22);
+  define('FEDTAX24', 0.24);
+  /* --------------------------- STATE TAX CONSTANTS -------------------------- */
+  define('STATETAX3', 0.03);
+  define('STATETAX4', 0.04);
+  define('STATETAX5', 0.05);
+  /* ------------------------- SOCIAL SEC TAX CONSTANT ------------------------ */
+  define('SOCIAL', 0.062);
+  /* -------------------------- MEDICARE TAX CONSTANT ------------------------- */
+  define('MEDICARE', 0.0145);
+  /* ------------------------ END CONSTANT DECLARATIONS ----------------------- */
+
   //Declare Overtime Variables
   $overHours = 0.00;
   $overRate = 0.00;
@@ -109,13 +111,13 @@
 /* -------------------------------------------------------------------------- */
 
   if ($annualGross <= 9525) {
-    $federalTax = $gross * $ft10;
+    $federalTax = $gross * FEDTAX10;
   } else if ($annualGross > 9525 && $annualGross <= 38700) {
-    $federalTax = $gross * $ft12;
+    $federalTax = $gross * FEDTAX12;
   } else if ($annualGross > 38700 && $annualGross <= 82500) {
-    $federalTax = $gross * $ft22;
+    $federalTax = $gross * FEDTAX22;
   } else {
-    $federalTax = $gross * $ft24;
+    $federalTax = $gross * FEDTAX24;
   }
 
 /* -------------------------------------------------------------------------- */
@@ -123,11 +125,11 @@
 /* -------------------------------------------------------------------------- */
 
   if($annualGross < 10000){
-    $stateTax = $gross * $st3;
+    $stateTax = $gross * STATETAX3;
   } else if($annualGross >= 10000 && $annualGross < 25000) {
-    $stateTax = $gross * $st4;
+    $stateTax = $gross * STATETAX4;
   } else {
-    $stateTax = $gross * $st5;
+    $stateTax = $gross * STATETAX5;
   }
 
 /* -------------------------------------------------------------------------- */
