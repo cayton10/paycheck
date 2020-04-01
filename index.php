@@ -80,18 +80,28 @@
         </div>
       </div>
     </div>
-      <form action="php/printcheck.php" method="post">
+      <form action="php/printcheck.php" method="post" id='form'>
           <div class="form-group row">
             <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
               <label for="employeeName">Name</label>
-              <input type="text" name="name" class="form-control" id="employeeName" placeholder="James Howlett" autocomplete="off">
+              <input type="text" name="name" class="form-control" id="employeeName" placeholder="James Howlett" autocomplete="off" required>
             </div>
           </div>
           <div class="form-group row">
             <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+              <label for="payType">Pay Type</label>
+              <select class="form-control" id="payType" required>
+                <option value="" disabled selected>Select Pay Type</option>
+                <option value="Hourly">Hourly</option>
+                <option value="Salary">Salary</option>
+              </select>
+            </div>   
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
               <label for="payRate">Pay Rate</label>
-              <input type="number" step=".01" name="payRate" class="form-control" id="payRate" aria-describedby="payHelp" placeholder="Ex. 16.50">
-              <small id="payHelp" class="form-text text-muted">Enter pay rate in $ per hour.</small>
+              <input type="number" step=".01" name="payRate" class="form-control" id="payRate" aria-describedby="payHelp" placeholder="Ex. 16.50 or 34,320">
+              <small id="payHelp" class="form-text text-muted">Enter hourly pay rate or annual salary.</small>
             </div>
           </div>
           <div class="form-group row">
@@ -101,8 +111,23 @@
               <small id="hoursHelp" class="form-text text-muted">Enter hours worked for one week.</small>
             </div>
           </div>
+          <div class="form-group row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+              <label for="paySchedule">Pay Period</label>
+              <div class="form-check form-check-inline row justify-content-between text-center">
+                <div class="col-xs-4 radio-left">
+                  <input class="form-check-input" type="radio" name="paySchedule" id="weekly" value="weekly" required>
+                  <label class="form-check-label" for="weekly">Weekly</label>
+                </div>
+                <div class="col-xs-4">
+                  <input class="form-check-input" type="radio" name="paySchedule" id="biWeekly" value="biWeekly">
+                  <label class="form-check-label" for="biWeekly">Bi-Weekly</label>
+                </div>
+              </div>   
+            </div>
+          </div>
           <div class="ficon text-center">
-            <input type="submit" value="Calculate" href="#" class="btn btn-default" role="button">
+            <input type="submit" value="Calculate" href="#" class="btn btn-default" role="button" id="calculate">
           </div>
       </form>
   </div>
@@ -122,6 +147,7 @@
   <script type="text/javascript">
     $('.portfolio').flipLightBox()
   </script>
+  <script src="js/custom.js"></script>
 
 </body>
 

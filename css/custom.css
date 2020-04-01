@@ -33,3 +33,24 @@ hr {
 .pay {
     margin-bottom: 70px;
 }
+
+.radio-left {
+    text-align: initial;
+}
+
+select{
+    border: solid 1px rgba(42, 140, 167, .4) !important;
+    border-radius: 5px !important;
+    color: #8a8d94;
+}
+
+.disabled {
+    background: #ccc;
+}
+
+/*Hide arrows on number input text fields*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

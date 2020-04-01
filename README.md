@@ -31,5 +31,12 @@ The employee's pay is based on a 40 hour week and they are paid time and a half 
     * Medicare:
         * 1.45% of gross income"
 
-        
+## Added Functionality 4.1.2020
+
+
+#### Salary vs. Hourly Function
+I decided to add an option to select whether a person's pay type is either hourly or salary. This required a simple jQuery function to disable the <strong>Hours Worked</strong> field upon selection of the <em>Salary</em> '<option>'. The salary option assumes a 40 hour work week and, as such, the previously mentioned function populates a value of 40 for weekly hours worked. 
+
+#### Weekly vs. Bi-Weekly Pay Schedule
+Also added on 4.1.2020 is a radio button option to select a weekly or bi-weekly pay schedule.
 
