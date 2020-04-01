@@ -79,33 +79,70 @@
   $overRate = 0.00;
   //create short var names from index from $_POST inputs
   $name = htmlspecialchars($_POST['name']);
+  $payType = htmlspecialchars($_POST['payType']);
   $payRate = htmlspecialchars($_POST['payRate']);
   $hours = htmlspecialchars($_POST['hours']);
+  $paySchedule = htmlspecialchars($_POST['paySchedule']); 
   //Get first and last names for output if both are given
   $names = explode(" ", $name);
   //Assign first and last name variables to exploded array values
   $fName = $names[0];
   $lName = $names[1];
 
-  //If overtime is reached, set appropriate variables and crunch numbers
-  if($hours > 40){
-    $overHours = $hours - 40;
-    $overRate = $payRate * 1.5;
-    $overTime = ($overHours * $overRate) * 2; //<-- X 2 for bi-weekly pay;
-    //Run appropriate time and a half if overtime
-    $gross = (($payRate  * 40) * 2 + $overTime);
-  } else { //Else run appropriate gross pay calc
-    $gross = ($payRate * $hours) * 2;
+  /* -------------------------------------------------------------------------- */
+  /*                             HOURLY CALCULATIONS                            */
+  /* -------------------------------------------------------------------------- */
+  /* ------------------------- BI-WEEKLY CONTROL FLOW ------------------------- */
+
+  if($payType == "Hourly" && $paySchedule == "biWeekly"){
+    //If overtime is reached, set appropriate variables and crunch numbers
+    if($hours > 40){
+      $overHours = $hours - 40;
+      $overRate = $payRate * 1.5;
+      $overTime = ($overHours * $overRate) * 2; //<-- X 2 for bi-weekly pay;
+      //Run appropriate time and a half if overtime
+      $gross = (($payRate  * 40) * 2 + $overTime);
+    } else { //Else run appropriate gross pay calc
+      $gross = ($payRate * $hours) * 2;
+    }
+  /* --------------------------- WEEKLY CONTROL FLOW -------------------------- */
+  } else if($payType == "Hourly" && $paySchedule == "weekly"){
+
+    if($hours > 40){
+      $overHours = $hours -40;
+      $overRate = $payRate * 1.5;
+      $overTime = ($overHours * $overRate); //For single week pay
+      //Run appropriate time and a half if overtime
+      $gross = (($payRate * 40) + $overTime);
+    } else {//Else run appropriate gross pay calc
+      $gross = ($payRate * $hours);
+    }
+  }
+  /* -------------------------------------------------------------------------- */
+  /*                             SALARY CALCULATION                             */
+  /* -------------------------------------------------------------------------- */
+  if($payType == "Salary" && $paySchedule == "biWeekly"){
+    //Bi-weekly caculation
+    $gross = ($payRate / 26);
+  } else if ($payType == "Salary" && $paySchedule == "weekly"){
+    //Weekly calculation
+    $gross = ($payRate / 52);
   }
 
   //Declare
+  $annualGross = 0.00;
   $federalTax = 0.00;
   $stateTax = 0.00;
   $socialSecurity = $gross * 0.062;
   $medicare = $gross * 0.0145;
-  $annualGross = $gross * 26;
-  //Bi-weekly pay period = 26 pay periods in one year.
 
+  /* ------------------------ ANNUAL GROSS CONTROL FLOW ----------------------- */
+
+  if($paySchedule == "biWeekly"){
+    $annualGross = $gross * 26;
+  } else if ($paySchedule == "weekly") {
+    $annualGross = $gross * 52;
+  }
 /* -------------------------------------------------------------------------- */
 /*                            CALCULATE FEDERAL TAX                           */
 /* -------------------------------------------------------------------------- */

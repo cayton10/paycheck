@@ -40,3 +40,6 @@ I decided to add an option to select whether a person's pay type is either hourl
 #### Weekly vs. Bi-Weekly Pay Schedule
 Also added on 4.1.2020 is a radio button option to select a weekly or bi-weekly pay schedule.
 
+#### jQuery Control Flow
+The addition of these functions highlighted the need for a few jQuery control flow statements. Based on a user selection of Salary or Hourly employee, example text within input fields changes to accomodate. The form field help text will also change based on pay type selection, and tells the user that a 40 hour work week is assumed for salaried employees. 
+

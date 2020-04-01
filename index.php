@@ -90,7 +90,7 @@
           <div class="form-group row">
             <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
               <label for="payType">Pay Type</label>
-              <select class="form-control" id="payType" required>
+              <select class="form-control" id="payType" name="payType" required autocomplete="off">
                 <option value="" disabled selected>Select Pay Type</option>
                 <option value="Hourly">Hourly</option>
                 <option value="Salary">Salary</option>
@@ -100,14 +100,14 @@
           <div class="form-group row">
             <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
               <label for="payRate">Pay Rate</label>
-              <input type="number" step=".01" name="payRate" class="form-control" id="payRate" aria-describedby="payHelp" placeholder="Ex. 16.50 or 34,320">
+              <input type="number" step=".01" name="payRate" class="form-control" id="payRate" aria-describedby="payHelp" placeholder="Ex. 16.50 or 34,320" autocomplete="off">
               <small id="payHelp" class="form-text text-muted">Enter hourly pay rate or annual salary.</small>
             </div>
           </div>
           <div class="form-group row">
             <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
               <label for="hours">Hours Worked</label>
-              <input type="number" step=".01" name="hours" class="form-control" id="hours" aria-describeby="hourHelp" placeholder="Ex. 40">
+              <input type="number" step=".01" name="hours" class="form-control" id="hours" aria-describeby="hourHelp" placeholder="Ex. 40" autocomplete="off">
               <small id="hoursHelp" class="form-text text-muted">Enter hours worked for one week.</small>
             </div>
           </div>
